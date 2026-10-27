@@ -1,10 +1,18 @@
+/**
+ * @author alvaro.zurinaga
+ * @brief Declare the event base supplied with the assignment
+ */
+
 #pragma once
 
-/// <summary>
-/// Abstract class for all events
-/// </summary>
+/**
+ * @brief Provide a base for game events
+ */
 class Event
 {
     public:
+        /**
+         * @brief Destroy the event
+         */
         virtual ~Event() = default;
 };

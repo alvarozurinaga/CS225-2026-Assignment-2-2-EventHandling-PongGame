@@ -1,14 +1,22 @@
+/**
+ * @author alvaro.zurinaga
+ * @brief Declare the component base supplied with the assignment
+ */
+
 #pragma once
 
 #include <string.h>
 #include <iostream>
 
+/**
+ * @brief Group components into a game entity
+ */
 class Entity;
 
 
-/// <summary>
-/// Abstract class for all components that can be attached to entities
-/// </summary>
+/**
+ * @brief Provide a base for entity components
+ */
 class Component
 {
 protected:
@@ -18,18 +26,28 @@ protected:
 	Entity* mOwner;
 public:
     
-    // Default constructor for the component
+    /**
+     * @brief Set the component name
+     */
     Component(const char* name);
     
-    // Gets the name of the component
+    /**
+     * @brief Return the component name
+     */
     const char* getName();
     
-    // Get the entity that owns the component
+	/**
+	 * @brief Return the entity that owns the component
+	 */
 	Entity* getOwner();
 
-    // Set the owne of the component
+    /**
+     * @brief Set the entity that owns the component
+     */
     void setOwner(Entity* owner);
 
-    // Default destroyer for the abstract class
+    /**
+     * @brief Destroy the component
+     */
     virtual ~Component() = default;
 };

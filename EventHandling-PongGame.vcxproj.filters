@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<?xml version='1.0' encoding='utf-8'?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
   <ItemGroup>
     <Filter Include="Game States">
       <UniqueIdentifier>{cd98f059-4bb5-4f79-ab91-322a7f693bcb}</UniqueIdentifier>
@@ -15,47 +15,108 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Main.cpp" />
-    <ClCompile Include="src\Levels\Level 1.cpp">
-      <Filter>Game States</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Framework\entity.cc">
-      <Filter>Framework</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Framework\component.cc">
-      <Filter>Framework</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Framework\event_handlers.cc">
-      <Filter>Framework</Filter>
-    </ClCompile>
     <ClCompile Include="src\Components\position_component.cc">
       <Filter>Components</Filter>
     </ClCompile>
     <ClCompile Include="src\Components\render_component.cc">
       <Filter>Components</Filter>
     </ClCompile>
+    <ClCompile Include="src\Components\motion_component.cc">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Framework\component.cc">
+      <Filter>Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Framework\entity.cc">
+      <Filter>Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Framework\event_handlers.cc">
+      <Filter>Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Levels\Level 1.cc">
+      <Filter>Game States</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cc" />
+    <ClCompile Include="src\Pong\pong_settings.cc">
+      <Filter>Pong</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Pong\pong_events.cc">
+      <Filter>Pong</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Pong\paddle.cc">
+      <Filter>Pong</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Pong\player.cc">
+      <Filter>Pong</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Pong\ball.cc">
+      <Filter>Pong</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Pong\cpu.cc">
+      <Filter>Pong</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Pong\input_event_manager.cc">
+      <Filter>Pong</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Pong\collision_event_manager.cc">
+      <Filter>Pong</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Pong\pong_game.cc">
+      <Filter>Pong</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Levels\Level 1.h">
-      <Filter>Game States</Filter>
+    <ClInclude Include="src\main.h" />
+    <ClInclude Include="src\Components\position_component.h">
+      <Filter>Components</Filter>
     </ClInclude>
-    <ClInclude Include="src\Framework\entity.hh">
-      <Filter>Framework</Filter>
+    <ClInclude Include="src\Components\render_component.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Components\motion_component.h">
+      <Filter>Components</Filter>
     </ClInclude>
     <ClInclude Include="src\Framework\component.hh">
+      <Filter>Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Framework\entity.hh">
       <Filter>Framework</Filter>
     </ClInclude>
     <ClInclude Include="src\Framework\event.hh">
       <Filter>Framework</Filter>
     </ClInclude>
-    <ClInclude Include="src\Components\position_component.hh">
-      <Filter>Components</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Components\render_component.hh">
-      <Filter>Components</Filter>
-    </ClInclude>
     <ClInclude Include="src\Framework\event_handlers.hh">
       <Filter>Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Levels\Level 1.h">
+      <Filter>Game States</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pong\pong_settings.h">
+      <Filter>Pong</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pong\pong_events.h">
+      <Filter>Pong</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pong\paddle.h">
+      <Filter>Pong</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pong\player.h">
+      <Filter>Pong</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pong\ball.h">
+      <Filter>Pong</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pong\cpu.h">
+      <Filter>Pong</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pong\input_event_manager.h">
+      <Filter>Pong</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pong\collision_event_manager.h">
+      <Filter>Pong</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pong\pong_game.h">
+      <Filter>Pong</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

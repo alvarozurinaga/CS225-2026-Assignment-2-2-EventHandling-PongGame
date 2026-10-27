@@ -1,29 +1,44 @@
+/**
+ * @author alvaro.zurinaga
+ * @brief Declare the entity base supplied with the assignment
+ */
+
 #pragma once
 #include <vector>
 #include "component.hh"
 
-/// <summary>
-/// Abstract class for all Entities
-/// </summary>
+/**
+ * @brief Group components into a game entity
+ */
 class Entity
 {
 protected:
     // Components attached to the class
     std::vector<Component*> components;
 public:
-    // Get a component by their name
+    /**
+     * @brief Find a component by its name
+     */
     Component* getComponent(const char* name);
     
-    // Attach a component to the Entity
+    /**
+     * @brief Add a component to the entity
+     */
     void attach(Component* component);
     
-    // Update method for the entity, must be overriden and called from the game state Update method
+    /**
+     * @brief Update the entity
+     */
     virtual void Update();
 
-    // Draw method for the entity, must be overriden and called from the game state Draw method
+    /**
+     * @brief Draw the entity
+     */
     virtual void Draw();
 
-    // Default destroyer for the class
+    /**
+     * @brief Delete the entity components
+     */
     virtual ~Entity();
 };
 

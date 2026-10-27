@@ -1,23 +1,28 @@
+/**
+ * @author alvaro.zurinaga
+ * @brief Declare the generic event framework supplied with the assignment
+ */
+
 #pragma once
 
 #include "event.hh"
 #include <vector>
 
-/// <summary>
-/// Interface for all custom Event Handling classes
-/// </summary>
+/**
+ * @brief Define the interface for receiving events
+ */
 class IEventHandler
 {
     public:
-        //Method that recieves and processes the event in the handler
+        /**
+         * @brief Process the received event
+         */
         virtual void call(Event* event) = 0;
 };
 
-/// <summary>
-/// Template class for all custom Event Handlers
-/// </summary>
-/// <typeparam name="T">T typedef of the obejct interested in the event</typeparam>
-/// <typeparam name="EVT">EVT type of the event</typeparam>
+/**
+ * @brief Connect typed events to a subscriber callback
+ */
 template<typename T, typename EVT>
 class EventHandler : public IEventHandler
 {
@@ -29,10 +34,14 @@ class EventHandler : public IEventHandler
         // Function pointer to the action processing the event
         ActionMethod method;
     public:
-        // Default constructor for the class
+        /**
+         * @brief Connect a subscriber to its event callback
+         */
         EventHandler(T* object, ActionMethod method) : object(object), method(method) {}
         
-        //Especific implementaton of the cal method from the interface
+        /**
+         * @brief Process the received event
+         */
         void call(Event *event) override {
             EVT* specific_event = dynamic_cast<EVT*>(event);
             if(specific_event != nullptr)
@@ -41,22 +50,37 @@ class EventHandler : public IEventHandler
 };
 
 
+/**
+ * @brief Manage event subscriptions and notifications
+ */
 class EventManager
 {
     std::vector<IEventHandler*> listeners;
     public:
+        /**
+         * @brief Subscribe a handler to events
+         */
         void registerEventHandler(IEventHandler* handler) {
             listeners.push_back(handler);
         }
 
+        /**
+         * @brief Return the handler at an index
+         */
         IEventHandler* getEventHandlerAt(int index){
             return listeners[index];   
         }
 
+        /**
+         * @brief Send an event to the subscribed handlers
+         */
         void notifyEvent(Event* event) {
             for(auto *listener : listeners) 
                 listener->call(event);
         }
 
+	/**
+	 * @brief Detect events for the current update
+	 */
 	virtual void update() = 0;
 };

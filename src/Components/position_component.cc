@@ -1,26 +1,32 @@
-#include "position_component.hh"
+/**
+ * @author alvaro.zurinaga
+ * @brief Keep an entity position in world coordinates
+ */
 
-PositionComponent::PositionComponent(int x, int y) :Component("Position")
+#include "position_component.h"
+
+PositionComponent::PositionComponent(float startX, float startY)
+    : Component("Position"), x(startX), y(startY)
 {
-    this->x = x;
-    this->y = y;
+    setOwner(NULL);
 }
 
-int PositionComponent::getX() const
+float PositionComponent::getX() const
 {
     return x;
 }
 
-int PositionComponent::getY() const
+float PositionComponent::getY() const
 {
     return y;
 }
 
-void PositionComponent::setPosition(int x, int y) {
-    this->x = x;
-    this->y = y;
+void PositionComponent::setPosition(float newX, float newY)
+{
+    x = newX;
+    y = newY;
 }
 
-PositionComponent::~PositionComponent() {
-
+PositionComponent::~PositionComponent()
+{
 }

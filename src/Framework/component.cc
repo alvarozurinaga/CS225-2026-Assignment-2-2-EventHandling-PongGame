@@ -1,3 +1,8 @@
+/**
+ * @author alvaro.zurinaga
+ * @brief Implement the component base supplied with the assignment
+ */
+
 #include <iostream>
 #include "component.hh"
 

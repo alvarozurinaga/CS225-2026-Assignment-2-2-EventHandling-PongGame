@@ -1,3 +1,8 @@
+/**
+ * @author alvaro.zurinaga
+ * @brief Implement the entity base supplied with the assignment
+ */
+
 #include "entity.hh"           
        
 

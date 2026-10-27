@@ -431,3 +431,6 @@ FodyWeavers.xsd
 !AECore/lib/
 !AECore/lib/Debug/
 !AECore/lib/Release/
+
+# Generated Moodle submission archives
+submission/
